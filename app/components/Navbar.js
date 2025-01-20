@@ -1,14 +1,22 @@
+"use client";
+
 import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <div className="bg-blue-500 p-4 text-white w-200 h-500" style={{width:"200px",height:'1000px'}}>
-      <div>
-      <Link href="/">Home</Link>
-      </div>
-      <div>
-      <Link href="/favorites">Favorites</Link>
-      </div>
-    </div>
+    <nav className="bg-gray-800 text-white p-4 w-64 h-screen">
+      <ul className="space-y-2">
+        <li>
+          <Link href="/" className="block p-2 hover:bg-gray-700 rounded">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link href="/favorites" className="block p-2 hover:bg-gray-700 rounded">
+            Favorites
+          </Link>
+        </li>
+      </ul>
+    </nav>
   );
 }
